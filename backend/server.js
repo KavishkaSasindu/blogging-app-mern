@@ -3,6 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const UserRoutes = require("./routes/UserRoutes");
+const PostsRoutes = require("./routes/PostRoutes");
 
 const app = express();
 require("dotenv").config();
@@ -30,3 +31,4 @@ mongoose
 
 // routs
 app.use(UserRoutes);
+app.use(PostsRoutes);
